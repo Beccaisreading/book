@@ -1,0 +1,69 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #4b6cb7;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+.featured-review, .other-reviews {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+footer {
+  text-align: center;
+  background: #eee;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+.review-page {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.review-page h2 {
+  color: #4b6cb7;
+}
+.review-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .review-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .review-card h3 {
+      margin-top: 0;
+    }
