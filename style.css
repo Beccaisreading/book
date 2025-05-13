@@ -68,11 +68,30 @@ footer {
       margin-top: 0;
     }
 .switch {
-  position: relative;
+  --line: #E8EBFB;
+  --dot: #275EFE;
+  --circle: #D3D4EC;
+  --background: #fff;
+  --duration: 0.3s;
+  --text: #9EA0BE;
+  --shadow: 0 1px 3px rgba(0, 9, 61, 0.08);
   cursor: pointer;
+  position: relative;
   display: inline-block;
   width: 60px;
   height: 32px;
+}
+
+.switch::before {
+  content: '';
+  width: 60px;
+  height: 32px;
+  border-radius: 16px;
+  background: var(--background);
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: var(--shadow);
 }
 
 .switch input {
@@ -83,27 +102,28 @@ footer {
   position: relative;
 }
 
-.switch input + div:before,
-.switch input + div:after {
+.switch input + div::before,
+.switch input + div::after {
+  --s: 1;
   content: '';
   position: absolute;
   height: 4px;
   top: 14px;
   width: 24px;
-  background: #E8EBFB;
-  transition: transform 0.3s ease;
+  background: var(--line);
+  transform: scaleX(var(--s));
+  transition: transform var(--duration) ease;
 }
 
-.switch input + div:before {
+.switch input + div::before {
+  --s: 0;
   left: 4px;
-  transform: scaleX(0);
   transform-origin: 0 50%;
   border-radius: 2px 0 0 2px;
 }
 
-.switch input + div:after {
+.switch input + div::after {
   left: 32px;
-  transform: scaleX(1);
   transform-origin: 100% 50%;
   border-radius: 0 2px 2px 0;
 }
@@ -111,12 +131,15 @@ footer {
 .switch input + div span {
   padding-left: 60px;
   line-height: 28px;
-  color: #9EA0BE;
+  color: var(--text);
   position: relative;
   display: inline-block;
 }
 
-.switch input + div span:before {
+.switch input + div span::before {
+  --x: 0;
+  --b: var(--circle);
+  --s: 4px;
   content: '';
   position: absolute;
   left: 4px;
@@ -124,20 +147,54 @@ footer {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 4px #D3D4EC;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  transform: translateX(0);
+  box-shadow: inset 0 0 0 var(--s) var(--b);
+  transform: translateX(var(--x));
+  transition: box-shadow var(--duration) ease, transform var(--duration) ease;
 }
 
-.switch input:checked + div:before {
-  transform: scaleX(1);
+.switch input + div span:not(:empty) {
+  padding-left: 68px;
 }
 
-.switch input:checked + div:after {
-  transform: scaleX(0);
+.switch input:checked + div::before {
+  --s: 1;
 }
 
-.switch input:checked + div span:before {
-  transform: translateX(28px);
-  box-shadow: inset 0 0 0 12px #275EFE;
+.switch input:checked + div::after {
+  --s: 0;
+}
+
+.switch input:checked + div span::before {
+  --x: 28px;
+  --s: 12px;
+  --b: var(--dot);
+  transform: translateX(var(--x));
+  box-shadow: inset 0 0 0 var(--s) var(--b);
+}
+
+/* Centering and Dribbble badge */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background: #E8EBFB;
+}
+
+.switch + .switch {
+  margin-top: 32px;
+}
+
+.dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+}
+
+.dribbble img {
+  display: block;
+  height: 28px;
 }
