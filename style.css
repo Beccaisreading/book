@@ -67,3 +67,60 @@ footer {
     .review-card h3 {
       margin-top: 0;
     }
+.container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.flex-row {
+  flex-direction: row;
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+  display: flex;
+}
+
+.book {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
+.info, .group {
+  padding: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.author {
+  color: #555;
+  margin-top: 5px;
+}
+
+.hidden.bottom {
+  margin-top: auto;
+}
+
+button.simple {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
