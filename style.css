@@ -13,6 +13,7 @@ canvas {
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 0; /* Ensure it stays behind the content */
 }
 
 h1 {
@@ -21,7 +22,7 @@ h1 {
   text-align: center;
   line-height: 8rem;
   font-size: 2rem;
-  z-index: 100;
+  z-index: 100; /* Ensure h1 appears above the canvas */
 }
 
 .aim {
@@ -31,7 +32,7 @@ h1 {
   top: 0;
   left: 0;
   background: transparent;
-  z-index: 50;
+  z-index: 1; /* Ensure aim UI appears above the canvas */
   -webkit-transform: translate3d(0, 0, 0);
 }
 
