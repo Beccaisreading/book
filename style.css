@@ -39,6 +39,13 @@ footer {
   margin-top: 40px;
 }
 
+.book {
+  width: 120px;      
+  height: 180px;      
+  object-fit: cover;  
+  border-radius: 4px; 
+}
+
 .review-page {
   background: white;
   padding: 25px;
