@@ -7,14 +7,15 @@ body {
 }
 
 header {
-  background: url('images/banner.jpg') no-repeat center center;
-  background-size: cover;
+  background: #4b6cb7;
   color: white;
-  height: 200px; /* adjust height as needed */
+  padding: 20px;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .header-logo {
