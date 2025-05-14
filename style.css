@@ -7,21 +7,33 @@ body {
 }
 
 header {
-  background: #4b6cb7;
+  background: url('images/banner.jpg') no-repeat center center;
+  background-size: cover;
   color: white;
-  padding: 20px;
+  padding: 60px 20px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  position: relative;
 }
 
-.header-banner {
-  width: 100%;
-  height: auto;
-  display: block;
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+header h1,
+header nav {
+  position: relative;
+  z-index: 1;
+}
+
+header nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 nav a {
