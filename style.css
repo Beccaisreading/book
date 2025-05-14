@@ -99,12 +99,6 @@ footer {
   display: flex;
 }
 
-.book {
-  width: 120px;
-  height: auto;
-  object-fit: cover;
-}
-
 .info, .group {
   padding: 10px;
 }
