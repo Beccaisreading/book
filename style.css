@@ -24,7 +24,7 @@ main {
   padding: 20px;
 }
 
-.featured-review, .other-reviews {
+.english-book-review, .japanese-book-review {
   background: white;
   padding: 20px;
   margin-bottom: 20px;
@@ -40,10 +40,49 @@ footer {
 }
 
 .book {
-  width: 120px;      
-  height: 180px;      
-  object-fit: cover;  
-  border-radius: 4px; 
+  width: 120px;
+  height: 180px;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.book:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.bookshelf {
+  padding: 20px;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.books a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .book {
+    width: 90px;
+    height: 135px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book {
+    width: 70px;
+    height: 105px;
+  }
 }
 
 .review-page {
@@ -58,22 +97,24 @@ footer {
 .review-page h2 {
   color: #4b6cb7;
 }
+
 .review-card {
-      background: white;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
-    .review-card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
+.review-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
 
-    .review-card h3 {
-      margin-top: 0;
-    }
+.review-card h3 {
+  margin-top: 0;
+}
+
 .container {
   padding: 20px;
   max-width: 1000px;
