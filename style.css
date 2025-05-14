@@ -7,33 +7,10 @@ body {
 }
 
 header {
-  background: url('https://wallpapercave.com/wp/wp4650310.jpg') no-repeat center center;
-  background-size: cover;
+  background: #4b6cb7;
   color: white;
-  padding: 80px 20px;
+  padding: 20px;
   text-align: center;
-  position: relative;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
-}
-
-header h1,
-header nav {
-  position: relative;
-  z-index: 1;
-}
-
-header nav a {
-  margin: 0 10px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 nav a {
